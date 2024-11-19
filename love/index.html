@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love Message</title>
+<link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="main-container">
+    <h1>I Love You, Sweetheart 💋🫂</h1>
+    <p>You're everything for me 💟<br>You're my whole world 🌎</p>
+    <div class="buttons">
+      <button class="button love-button" onclick="showPopup('love')">💖 If You Love Me 😍</button>
+      <button class="button default-button" onclick="showPopup('neutral')"> If You Don't Love Me 😢</button>
+    </div>
+  </div>
+
+  <!-- Popup Modal -->
+  <div id="popup-modal" class="popup">
+    <div class="popup-content">
+      <span class="close-button" onclick="closePopup()">&times;</span>
+      <p id="popup-message"></p>
+    </div>
+  </div>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="background-music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    function showPopup(option) {
+      const popup = document.getElementById('popup-modal');
+      const message = document.getElementById('popup-message');
+
+      if (option === 'love') {
+        message.innerHTML = "Let's meet, my Jaan! 💋💌";
+      } else {
+        message.innerHTML = "Let's meet, Shona 💋🫂💓. Kashi rahu shakte mi tujhyashivay?";
+      }
+
+      popup.style.display = "flex"; // Show the popup
+    }
+
+    function closePopup() {
+      const popup = document.getElementById('popup-modal');
+      popup.style.display = "none"; // Hide the popup
+    }
+  </script>
+</body>
+</html>
